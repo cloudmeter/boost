@@ -15,6 +15,11 @@
 # pragma once
 #endif // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
+// suppress warnings about OpenSSL being deprecated in OSX
+#if defined(__APPLE__)
+	#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+#endif
+
 #include <boost/asio/ssl/basic_context.hpp>
 #include <boost/asio/ssl/context.hpp>
 #include <boost/asio/ssl/context_base.hpp>
