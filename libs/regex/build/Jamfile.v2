@@ -103,6 +103,7 @@ if ! $(disable-icu)
          <library>icuin/<link>shared/<runtime-link>shared 
          <define>BOOST_HAS_ICU=1 
          <runtime-link>shared
+         <toolset>gcc:<linkflags>-ldl
          <toolset>msvc:<linkflags>/delayload:$(icuucd_name:B).dll
          <toolset>msvc:<linkflags>/delayload:$(icuuc_name:B).dll
          <toolset>msvc:<linkflags>/delayload:$(icudt_name:B).dll
